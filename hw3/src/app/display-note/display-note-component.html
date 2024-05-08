@@ -1,0 +1,9 @@
+<div *ngFor="let note of notes; let i = index" (click)="selectNote(note, i)" class="item"
+  [class.selected]="selectedIndex === i">
+  <h2 class="title">{{ note.title }}</h2>
+  <p class="content">{{ note.content }}</p>
+  <div *ngIf="selectedIndex === i" class="note-actions">
+    <button (click)="editNote()" class="editBtn">Редактирай</button>
+    <button (click)="deleteNote(i)" class="deleteBtn">Изтрий</button>
+  </div>
+</div>

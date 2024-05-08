@@ -1,0 +1,26 @@
+<form #noteForm="ngForm" (ngSubmit)="saveNote()">
+  <div>
+    <input type="text" [(ngModel)]="newNote.title" #title="ngModel" name="title" required minlength="5"
+      placeholder="Заглавие на бележката" class="input" [ngClass]="{'error': title.invalid && title.touched}" />
+    @if(title.invalid && title.touched){
+    <div class="error-message">
+      <span>Заглавието трябва да съдържа минимум 5 символа</span>
+    </div>
+    }
+  </div>
+
+  <div>
+    <textarea [(ngModel)]="newNote.content" #content="ngModel" name="content" required minlength="7"
+      placeholder="Съдържание на бележката..." class="input"
+      [ngClass]="{'error': content.invalid && content.touched}"></textarea>
+    @if(content.invalid && content.touched){
+    <div class="error-message">
+      <span>Описанието трябва да съдържа минимум 7 символа</span>
+    </div>
+    }
+  </div>
+
+  <button type="submit" class="button">
+    Съхрани бележката
+  </button>
+</form>

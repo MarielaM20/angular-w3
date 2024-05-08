@@ -1,0 +1,50 @@
+.main-title{
+    width: 100%;
+    text-align: center;
+    color: #333;
+  }
+  .app-container{
+    display: flex;
+  }
+  
+  .note-input-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .note-list-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .note {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .note.selected {
+    border-color: blue;
+  }
+  
+  .note-controls {
+    display: none;
+  }
+  
+  .note.selected .note-controls {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 5px 15px;
+    margin-right: 10px;
+  }
+  
+  /* Add responsive behavior if needed */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }

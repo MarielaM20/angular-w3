@@ -1,0 +1,51 @@
+.item {
+  background-color: #f9f9f9;
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s ;
+  cursor: pointer;
+  width: 50%;
+}
+
+.item.selected {
+  border-style: dashed;
+}
+
+
+.title {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.note-content {
+  color: #666;
+  font-size: 18px;
+}
+
+
+.editBtn,
+.deleteBtn {
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.editBtn {
+  background-color: blue;
+}
+
+.deleteBtn {
+  background-color: red;
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+  filter: brightness(90%);
+}
